@@ -91,10 +91,6 @@ for package in "${packages[@]}"; do
         echo -e "$package \e[32mis already installed.\e[0m"
     fi
 done
-# Softwares (AUR)
-if ! pacman -Qm | grep -q google-chrome; then
-    exec_log "Installing google-chrome (AUR)" "yay -S --noconfirm google-chrome"
-fi
 
 # Wine Dependencies
 packages=( gnutls lib32-gnutls libpulse lib32-libpulse lib32-alsa-plugins alsa-lib lib32-alsa-lib sqlite libxcomposite lib32-libxcomposite libva lib32-libva gtk3 lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs )
