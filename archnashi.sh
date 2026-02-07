@@ -52,7 +52,7 @@ for package in "${packages[@]}"; do
 done
 
 # AMD Drivers
-packages=( mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader libva-mesa-driver lib32-libva-mesa-driver vulkan-mesa-layers mesa-vdpau lib32-mesa-vdpau )
+packages=( mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader libva-mesa-driver lib32-libva-mesa-driver vulkan-mesa-layers )
 for package in "${packages[@]}"; do
     if ! pacman -Qq | grep -qw "$package"; then
         exec_log "Installing $package" "sudo pacman -S --noconfirm ${package}"
