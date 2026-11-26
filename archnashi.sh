@@ -188,13 +188,20 @@ fi
 
 # --- Applications optionnelles ----------------------------------------------
 
-if ask "Installer les applications courantes (LibreOffice, qBittorrent, Discord, Kdenlive, KPat) ?" o; then
-    install_pkgs "Installation des applications" libreoffice-fresh qbittorrent discord kdenlive kpat
+if ask "Installer les applications courantes (LibreOffice, qBittorrent, Discord, Kdenlive, KPat, VLC) ?" o; then
+    install_pkgs "Installation des applications" libreoffice-fresh qbittorrent discord kdenlive kpat vlc vlc-plugins-all
 fi
 
-if ask "Installer les outils de jeu (Steam, Lutris, Wine, Godot) ?" o; then
+if ask "Installer les outils de jeu (Steam, Lutris, Wine, Godot, GameMode, Gamescope, umu-launcher) ?" o; then
     # Les dépendances de Wine/Steam sont tirées automatiquement par les paquets.
-    install_pkgs "Installation des outils de jeu" steam lutris wine-staging godot
+    install_pkgs "Installation des outils de jeu" \
+        steam lutris wine-staging godot \
+        gamemode lib32-gamemode gamescope umu-launcher
+fi
+
+if ask "Installer les outils de développement (VS Code, Node.js, Python, Electron) ?" o; then
+    # nodejs ne contient pas npm sur Arch : paquet séparé
+    install_pkgs "Installation des outils de développement" code nodejs npm python electron
 fi
 
 # --- Sécurité / robustesse (optionnel) --------------------------------------

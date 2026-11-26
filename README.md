@@ -20,7 +20,7 @@ Lis le script avant de le lancer : il modifie `/etc/pacman.conf`, `/etc/environm
 - Installe le microcode CPU, `yay`, PipeWire, les codecs, les polices, NetworkManager, le Bluetooth
 - Détecte ton GPU (AMD ou Intel) et installe les pilotes Mesa/Vulkan correspondants (NVIDIA : manuel)
 - Installe KDE et propose `plasma-login-manager`
-- Propose en option : applications courantes, jeux (Steam, Lutris, Wine, Godot), pare-feu `ufw` + `earlyoom`, `snapper`
+- Propose en option : applications courantes (dont VLC), jeux (Steam, Lutris, Wine, Godot, GameMode, Gamescope, umu-launcher), outils de dev (VS Code, Node.js, Python, Electron), pare-feu `ufw` + `earlyoom`, `snapper`
 
 ## Options
 
